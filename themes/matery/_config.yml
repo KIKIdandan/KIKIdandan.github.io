@@ -1,0 +1,437 @@
+# ============================================================
+# 王丹丹的个人学术博客 - Matery 主题配置
+# 所有者：王丹丹
+# 说明：所有第三方服务（评论、统计、社交账号）默认关闭，
+#       待提供对应账号后再在相应节点开启。
+# ============================================================
+
+# ---------- 导航菜单 ----------
+menu:
+  首页:
+    url: /
+    icon: fas fa-home
+  科研项目:
+    url: /research
+    icon: fas fa-flask
+  工程项目:
+    url: /projects
+    icon: fas fa-microchip
+  技术博客:
+    url: /#articles
+    icon: fas fa-book-open
+  个人简历:
+    url: /resume
+    icon: fas fa-id-card
+  关于我:
+    url: /about
+    icon: fas fa-user-circle
+
+# 站点起始时间
+time:
+  enable: true
+  year: 2026
+  month: 01
+  date: 01
+  hour: 00
+  minute: 00
+  second: 00
+
+# ---------- 首页封面轮播 ----------
+cover:
+  showPrevNext: false
+  showIndicators: false
+  autoLoop: false
+  duration: 120
+  intervalTime: 5000
+  useConfig: false
+  video:
+    enable: false
+
+# 梦想语句（关闭，保持专业）
+dream:
+  enable: false
+
+# 音乐（关闭）
+music:
+  enable: false
+
+# 视频（关闭）
+video:
+  enable: false
+
+# 推荐文章
+recommend:
+  enable: true
+  showTitle: true
+  useConfig: false
+
+# ---------- 站点标识 ----------
+favicon: /favicon.png
+logo: /medias/dog/logo.svg
+
+# 首页 Banner 第二个按钮（暂未提供 GitHub，关闭）
+indexbtn:
+  enable: false
+  name: GitHub
+  icon: fab fa-github-alt
+  url:
+
+# 社交链接（未提供账号，留空不显示）
+socialLink:
+  github:
+  email:
+  facebook:
+  twitter:
+  qq:
+  weibo:
+  zhihu:
+  rss: false
+
+# ---------- 文章目录 ----------
+toc:
+  enable: true
+  heading: h2, h3, h4
+  collapseDepth: 0
+  showToggleBtn: true
+
+# 代码块
+code:
+  lang: true
+  copy: true
+  shrink: true
+  break: false
+
+# 打赏（关闭）
+reward:
+  enable: false
+
+# 复制版权
+copyright:
+  enable: false
+  minCharNumber: 120
+  description: 本文章著作权归作者所有，任何形式的转载都请注明出处。
+
+# 数学公式
+mathjax:
+  enable: false
+
+# 文章信息
+postInfo:
+  date: true
+  update: false
+  wordCount: false
+  totalCount: false
+  min2read: false
+  readCount: false
+
+# 点击爱心 / 樱花 / 星星 / 飘雪（全部关闭，保持科研风格）
+clicklove:
+  enable: false
+sakura:
+  enable: false
+mouseStar:
+  enable: false
+snowdown:
+  enable: false
+
+# ---------- 关于页个人信息 ----------
+profile:
+  avatar: /medias/dog/avatar.svg
+  career: 东北林业大学 · 控制科学与工程 · 硕士研究生（研二）
+  introduction: 东北林业大学控制科学与工程专业硕士研究生，目前研二。本科就读于东北林业大学自动化专业。熟练使用 Python、MATLAB 进行工程编程与仿真开发，掌握系统建模、数据分析与程序调试优化等专业技能。
+
+# ---------- 关于页：我的项目 ----------
+myProjects:
+  enable: true
+  data:
+    落叶松枯梢病菌时空蔓延机制研究:
+      featured: true
+      icon: fas fa-tree
+      iconBackground: 'linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%)'
+      url: /research/larch-swoosh-disease/
+      demoUrl:
+      githubUrl:
+      desc: 国家重点研发计划子课题（2024.12—2025.12）。参与搭建病害三大数据库、深度学习时空蔓延模型研建与调试优化，协助撰写项目报告、梳理论文内容。
+      shortDesc: 参与国家重点研发计划子课题，负责病害数据库搭建与时空蔓延模型研建。
+      label: '国家重点研发计划子课题'
+      highlight: '数据处理 · 模型研建'
+      tech:
+        - 数据库搭建
+        - 数据清洗
+        - 深度学习模型
+        - Python
+    ABM-SI 模型松材线虫病传播预测研究:
+      featured: true
+      icon: fas fa-bug
+      iconBackground: 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)'
+      url: /research/abm-si/
+      demoUrl:
+      githubUrl:
+      desc: 基于智能体建模（ABM）与 SI 流行病传播模型，结合 GIS 空间数据构建松材线虫病传播预测模型。
+      shortDesc: ABM-SI 模型构建与松材线虫病传播仿真。
+      label: '当前研究方向'
+      highlight: '智能体建模 · 传播预测'
+      tech:
+        - ABM
+        - SI 模型
+        - MATLAB
+        - 仿真
+    遥感影像与 GIS 空间数据分析:
+      featured: true
+      icon: fas fa-satellite
+      iconBackground: 'linear-gradient(135deg, #315c79 0%, #3b82f6 100%)'
+      url: /research/remote-sensing-gis/
+      demoUrl:
+      githubUrl:
+      desc: 利用遥感影像获取森林资源数据，结合 GIS 空间分析技术处理地理信息，为病害监测和防控提供空间数据支撑。
+      shortDesc: 遥感影像处理与 GIS 空间分析。
+      label: '研究方向'
+      highlight: '遥感 · GIS 空间分析'
+      tech:
+        - 遥感影像
+        - GIS
+        - 空间分析
+        - Python
+
+# ---------- 关于页：我的技能 ----------
+# 统一使用 90% 表示"已掌握"，不做熟练度差异评估
+mySkills:
+  enable: true
+  data:
+    Python:
+      background: 'linear-gradient(to right, #1e3a5f 0%, #315c79 100%)'
+      percent: 90%
+    MATLAB / Simulink:
+      background: 'linear-gradient(to right, #2563eb 0%, #3b82f6 100%)'
+      percent: 90%
+    系统建模:
+      background: 'linear-gradient(to right, #315c79 0%, #60a5fa 100%)'
+      percent: 90%
+    数据分析:
+      background: 'linear-gradient(to right, #1e3a5f 0%, #3b82f6 100%)'
+      percent: 90%
+    算法实现:
+      background: 'linear-gradient(to right, #2563eb 0%, #60a5fa 100%)'
+      percent: 90%
+
+# 个人相册（关闭，无个人照片）
+myGallery:
+  enable: false
+
+# 归档页日历
+postCalendar: true
+
+# ---------- 评论系统（全部关闭） ----------
+gitalk:
+  enable: false
+  owner:
+  repo:
+  oauth:
+    clientId:
+    clientSecret:
+  admin:
+gitment:
+  enable: false
+disqus:
+  enable: false
+livere:
+  enable: false
+  uid:
+tcaptcha:
+  enable: false
+  appid:
+valine:
+  enable: false
+minivaline:
+  enable: false
+waline:
+  enable: false
+changyan:
+  enable: false
+twikoo:
+  enable: false
+
+# Fork me on Github（未提供仓库，关闭）
+githubLink:
+  enable: false
+  url:
+  title: Fork Me
+
+# 文章密码
+verifyPassword:
+  enable: false
+
+# 不蒜子统计（默认关闭：第三方统计接口在部分网络不可达，开启会产生控制台报错）
+busuanziStatistics:
+  enable: false
+  totalTraffic: false
+  totalNumberOfvisitors: false
+
+# Google / 百度统计（关闭）
+googleAnalytics:
+  enable: false
+  id:
+baiduAnalytics:
+  enable: false
+  id:
+
+# 百度推送
+baiduPush: false
+
+# ---------- 前端库路径（保持主题本地资源） ----------
+libs:
+  css:
+    matery: /css/matery.css
+    mycss: /css/my.css
+    dogcss: /css/dog.css
+    gallery: /css/gallery.css
+    fontAwesome: /libs/awesome/css/all.min.css
+    materialize: /libs/materialize/materialize.min.css
+    aos: /libs/aos/aos.css
+    animate: /libs/animate/animate.min.css
+    lightgallery: /libs/lightGallery/css/lightgallery.min.css
+    aplayer: /libs/aplayer/APlayer.min.css
+    dplayer: /libs/dplayer/DPlayer.min.css
+    gitalk: /libs/gitalk/gitalk.css
+    jqcloud: /libs/jqcloud/jqcloud.css
+    tocbot: /libs/tocbot/tocbot.css
+    prism: /libs/prism/prism.css
+    mermaid: /libs/mermaid/mermaid.min.css
+    fancybox: /libs/fancybox/jquery.fancybox.css
+    justifiedGallery: /libs/justifiedGallery/justifiedGallery.min.css
+  js:
+    matery: /js/matery.js
+    jquery: /libs/jquery/jquery-3.6.0.min.js
+    materialize: /libs/materialize/materialize.min.js
+    masonry: /libs/masonry/masonry.pkgd.min.js
+    aos: /libs/aos/aos.js
+    scrollProgress: /libs/scrollprogress/scrollProgress.min.js
+    lightgallery: /libs/lightGallery/js/lightgallery-all.min.js
+    clicklove: /libs/others/clicklove.js
+    sakura: /libs/others/sakura-small.js
+    star: /libs/others/star.js
+    snow: /libs/others/snow.js
+    tcaptcha: /libs/others/TencentCaptcha.js
+    busuanzi: /libs/others/busuanzi.pure.mini.js
+    aplayer: /libs/aplayer/APlayer.min.js
+    meting: /libs/aplayer/Meting.min.js
+    dplayer: /libs/dplayer/DPlayer.min.js
+    crypto: /libs/cryptojs/crypto-js.min.js
+    echarts: /libs/echarts/echarts.min.js
+    gitalk: /libs/gitalk/gitalk.min.js
+    valine: /libs/valine/Valine.min.js
+    minivaline: /libs/minivaline/MiniValine.js
+    waline: /libs/waline/Waline.min.js
+    twikoo: /libs/twikoo/twikoo.all.min.js
+    jqcloud: /libs/jqcloud/jqcloud-1.0.4.min.js
+    tocbot: /libs/tocbot/tocbot.min.js
+    canvas_nest: /libs/background/canvas-nest.js
+    ribbon: /libs/background/ribbon.min.js
+    ribbonRefresh: /libs/background/ribbon-refresh.min.js
+    ribbon_dynamic: /libs/background/ribbon-dynamic.js
+    instantpage: /libs/instantpage/instantpage.js
+    typed: /libs/typed/typed.js
+    mermaid: /libs/mermaid/mermaid.min.js
+    fancybox: /libs/fancybox/fancybox.js
+    justifiedGallery: /libs/justifiedGallery/justifiedGallery.min.js
+    codeblock: /libs/codeBlock/codeBlockFuction.js
+    codelang: /libs/codeBlock/codeLang.js
+    codecopy: /libs/codeBlock/codeCopy.js
+    codeshrink: /libs/codeBlock/codeShrink.js
+
+# 默认特色图（复用主题自带抽象图片，非个人素材）
+featureImages:
+- /medias/featureimages/0.jpg
+- /medias/featureimages/1.jpg
+- /medias/featureimages/2.jpg
+- /medias/featureimages/3.jpg
+- /medias/featureimages/4.jpg
+- /medias/featureimages/5.jpg
+- /medias/featureimages/6.jpg
+
+# 转载规则
+reprint:
+  enable: true
+  default: cc_by
+
+# 在线联系（关闭）
+daovoice:
+  enable: false
+  app_id:
+tidio:
+  enable: false
+  public_key:
+tuxiaochao:
+  enable: false
+  productId:
+
+# 背景特效（关闭）
+canvas_nest:
+  enable: false
+ribbon:
+  enable: false
+ribbon_dynamic:
+  enable: false
+
+# 分享
+sharejs:
+  enable: true
+  sites: twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin
+addthis:
+  enable: false
+  pubid:
+
+# 首页打字副标题
+subtitle:
+  enable: true
+  loop: true
+  showCursor: true
+  startDelay: 300
+  typeSpeed: 80
+  backSpeed: 40
+  sub:
+    - 控制科学与工程研究生
+    - ABM-SI 传播预测研究
+    - 遥感与 GIS 空间分析
+    - MATLAB 建模与仿真
+    - 科研探索与技术实践
+
+# 手机二级菜单
+navMenu:
+  mleft: false
+  bgColor: " "
+
+# 网页预加载
+instantpage:
+  enable: true
+
+# Banner 每日切换
+banner:
+  enable: false
+
+# ICP 备案（关闭）
+icp:
+  enable: false
+  url:
+  text:
+
+# CDN（关闭，本地资源）
+jsDelivr:
+  url:
+
+# 网站背景图
+background:
+  enable: true
+  url: /medias/dog/bg.svg
+
+# 说说（关闭）
+artitalk:
+  enable: false
+# 哔哔（关闭）
+bbtime:
+  enable: false
+
+# Mermaid
+mermaid:
+  enable: false
+  version: "latest"

@@ -1,0 +1,69 @@
+<%
+    var configRoot = config.root
+    configRoot = (configRoot === null || configRoot === undefined || configRoot === '/') ? '' : configRoot;
+%>
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  <% Object.keys(theme.menu).forEach(function(key) { %>
+  <li class="hide-on-med-and-down nav-item">
+    <% if(!theme.menu[key].children) { %>
+    <a href="<%- url_for(theme.menu[key].url) %>" class="waves-effect waves-light">
+      <% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
+      <i class="<%- theme.menu[key].icon %>" style="zoom: 0.6;"></i>
+      <% } %>
+      <span><%- __(key) %></span>
+    </a>
+    <% } else { %>
+    <a href="<%- theme.menu[key].url %>" class="waves-effect waves-light">
+
+      <% if (theme.menu[key].icon && theme.menu[key].icon.length > 0) { %>
+      <i class="<%- theme.menu[key].icon %>" style="zoom: 0.6;"></i>
+      <% } %>
+      <span><%- __(key) %></span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      <% for(let childrenLink of theme.menu[key].children){ %>
+      <li>
+        <a href="<%- url_for(childrenLink.url)%>">
+          <% if (childrenLink.icon && childrenLink.icon.length > 0) { %>
+          <i class="<%- childrenLink.icon %>" style="margin-top: -20px; zoom: 0.6;"></i>
+          <% } %>
+          <span><%- childrenLink.name %></span>
+        </a>
+      </li>
+      <% } %>
+    </ul>
+    <% } %>
+  </li>
+  <% }); %>
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="<%= __('search') %>" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<%- partial('_partial/mobile-nav') %>
+
+<script>
+  /* 当前页面导航高亮：仅添加视觉类名，不改变导航结构与跳转行为 */
+  (function () {
+    var normalize = function (url) {
+      if (!url || url.indexOf('#') > -1 || url.indexOf('javascript:') === 0) return null;
+      url = url.replace(/[?#].*$/, '');
+      if (url.length > 1) url = url.replace(/\/+$/, '');
+      return url || '/';
+    };
+    var current = normalize(location.pathname) || '/';
+    var links = document.querySelectorAll('#headNav ul.nav-menu li.nav-item > a, #mobile-nav .menu-list a');
+    Array.prototype.forEach.call(links, function (a) {
+      var target = normalize(a.getAttribute('href'));
+      if (target && target === current) {
+        a.classList.add('nav-current');
+        a.setAttribute('aria-current', 'page');
+      }
+    });
+  })();
+</script>

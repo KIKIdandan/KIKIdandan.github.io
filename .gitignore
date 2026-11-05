@@ -1,0 +1,48 @@
+# Hexo
+public/
+.deploy_git/
+db.json
+debug.log
+
+# Dependencies
+node_modules/
+.venv/
+.pip_cache/
+.pytest_cache/
+
+# Local backups (manual, never commit)
+.backup_before_resume/
+.backup_*/
+*.bak
+source/_posts_old/
+
+# Environment & secrets
+.env
+.env.*
+*.local
+
+# Private research data (must stay outside this repo)
+/Dog_blog_private/
+**/research-restricted/
+*.blocks.json
+watchlist.txt
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test outputs
+test-results/
+reports/
+generated_tests/
+chroma_db/
+playwright-report/
